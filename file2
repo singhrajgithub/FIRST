@@ -1,2 +1,113 @@
 we are learning git diff command
 this file is added to test the command
+
+
+git branch feature1
+
+branch can only be created from existing branch
+branches are reference to commit , no code is copied 
+
+HEAD determines which brnahc you are at currently 
+
+git checkout feature1
+git switch feature1
+
+switching back to master :
+
+git switch master 
+git merge feature1 
+git merge <name of the branch to be merged into the branch you are on >
+
+fast forward merge 
+
+switching back directly to master and moving it to the latest commit of feature via merge
+
+Recursive three way merge :
+
+git switch master
+git merge feature1
+
+earlier both branches have commit ID of file1
+
+changes made on both branches :
+master branch --   commit id for file 2
+feature branch --  commit id for modified file1 and index.html
+
+just moving the branch to look at new commit won't do merge here
+
+to resolve this we do recursive 3 way merge
+
+git switch master
+git merge feature1
+
+it will combine commit ID for file2 , modified file1 and index.html
+and it will create new commit ID for merge.
+
+git will choose when to go for fast forward or 3 way recursive merge
+delete the feature branch-- git branch -d feature1
+
+git switch feature1== when we do git switch feature1 HEAD goes to feature1
+now if we do git branch feature2
+
+branch are just reference to CommitID
+New branch doe not change HEAD unless switched.
+
+git branch feature1 feature2 ==> HEAD would be sitting with master branch.
+
+
+
+git clone <remote repository address> :
+
+when we clone from remote branch to local machine then 
+git histroy graph also copied to local
+branch main gets created
+apart from it one more branch :origin/main gets created : this does not heappen when we do git init.
+
+if we have any other feature branch than it create :origin/feature
+
+origin/* branch are for remote tracking only , cannot switch or commit in local 
+
+git branch -r to see this branches
+
+First case :
+
+Now some other team member pushed to remote github with commit file2 
+local changes are remote github are out of sync. hence to solve this problem we need to follow below approach
+git fetch 
+origin/main of local will track the latest commit
+here no changes have been done in local branch then fast forward merge would be suitable :
+git merge origin/main
+
+second case :
+what if we have changes at both end remote and local repository:
+
+commitid for file 2 in branch main at remote github
+commitid for file 3 in branch main at local repository.
+
+now if we run git fetch in local repo then it will create diversing branch looking for commit ID for file 2
+
+now if we run git merge origin/main
+
+this will run 3 way merge
+
+git pull ==> instead of git fetch and git merge git pull can do the same thing.
+
+how to push in remote github
+
+git push 
+
+third case :
+
+if we have changes at both remote githun and local and we donot want to fetch or pull
+
+then git push will throw error .
+git push -f can be run [ this will drop the changes from remote repository and will move the chanes from local to remote repository]
+
+this is not recommed unless in deep trouble.
+
+
+
+
+
+
+
