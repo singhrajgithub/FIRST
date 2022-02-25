@@ -121,3 +121,9 @@ git branch -r [ remote branches ]
 
 
 
+remote origin mapped to :
+
+git remote -v
+
+// do some new changes to the local file and move local branch ahead of the remote repository.
+
