@@ -105,9 +105,19 @@ git push -f can be run [ this will drop the changes from remote repository and w
 
 this is not recommed unless in deep trouble.
 
+check which branches are merged or not :
 
+git branch --merged
 
+which are not merged by below command :
+git branch --no-merged
 
+see log for all branches 
+git log --all --oneline --graph
+
+git branch --all [ all branches]
+
+git branch -r [ remote branches ]
 
 
 
