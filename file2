@@ -232,5 +232,9 @@ with git reset no additional commitID where as git revert does
 
 Rebase & rebase vs Merge
 
+regular merge -- >  regular merge from feature to master it will create commitID
 
-
+rebase -- creates cleaner commit history 
+easier to navigate with git log
+rebase re writes commit history
+original commit id goes 
