@@ -167,3 +167,70 @@ pull request allows collaborators of project
 gitlab -- its merge request
 
 
+==============================================================
+
+Webhook Vs API ==>
+
+Jenkins calling GitHub APIs continuously :
+
+most of the time APIs return stagnant data .
+github server will be bombarded 
+Apps will exceeds API limits.
+
+What is webhook ?
+Instead of Jenkins call Github , GitHub let Jenkins know when new changes are there :
+GitHub will do a POST call to your Appif repo changes.
+Lightweight
+Realtime
+Webhooks are automated messages sent from apps when something happens. They have a message—or payload—and are sent to a unique URL—essentially the app'
+
+=======================================================================================
+Git Branching Strategy 
+Trunk vs Git Flow
+
+Trunk  Branch Strategy 
+one main branch remains 
+If we have to develop some feature we create feature branch and then merge it with main branch down the line.
+
+Small frequent updates to a core trunk 
+    Code rview , feedback done via pull request.
+Feature branches are short lived
+Use feature flags
+Most popular branching strategy for DevOps Practices.
+Notable companies using trunk based development - GitHub , Google
+
+Git Flow :
+
+Specific Roles to different branches
+    Develop branch created from main
+    release branch created from Develop
+    feature branches created from Develop
+    When a feature is complete that feature branch is merged into Develop.
+    Release branch created from develop for final review
+    release branch merged to both main and Develop.
+    If an issue is found , hotfix created from main branch.
+    Once fixed hotfix merged to botj Develop and main.
+
+works well in release based workflow
+works well with onboarding teams new to git 
+    generally requires a release manager.
+
+================================================
+To revert a particular commit use git revert 
+git revert CommitID
+Pressing q without : also works
+Revert will come as commit.
+
+=================================================
+
+git reset CommitID
+git reset COmmitID --hard
+
+with git reset no additional commitID where as git revert does
+
+==================================================
+
+Rebase & rebase vs Merge
+
+
+
