@@ -127,3 +127,43 @@ git remote -v
 
 // do some new changes to the local file and move local branch ahead of the remote repository.
 
+// do some new changes to the local file and move local branch ahead of the remote repository.
+
+If branch does not exists on remote github and you have created new branch
+in your local then you may use 
+git push origin HEAD 
+
+command 
+or create new branch in github and then push it again from repository.
+
+// Browse history and commits
+
+git log 
+
+git log --oneline [ HEAD branches shows up]
+
+git log --oneline --all 
+
+git log --oneline --all --graph
+
+git graph shows history in real awesome way.
+
+git log --oneline --all --stat
+
+git log --oneline --all --patch
+
+git show commitid [ to see particular commit]
+
+git ls-tree commitid
+
+git rm file  [ remove file from local and staging area]
+
+Pull Request (PR) 
+
+Request to pull the changes from one branch to another .
+
+pull request allows collaborators of project
+
+gitlab -- its merge request
+
+
